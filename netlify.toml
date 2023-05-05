@@ -1,5 +1,6 @@
 [build]
-  command = "cd frontend && yarn install && yarn build && cp -r build ../functions/public"
+  command = "cd frontend && yarn install && yarn build"
+  publish = "frontend/build"
   functions = "functions"
 
 [[redirects]]
