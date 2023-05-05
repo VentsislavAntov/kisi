@@ -54,6 +54,7 @@ app.get('/images', (req, res) => {
 
 app.post('/upload-image', (req, res) => {
   const imageFile = req.files.image;
+  // Adding a timestamp to avoid creating the same file name twice
   const imageFileName = `${imageFile.name}-${Date.now()}.png`;
   const imagePath = path.join(__dirname, 'data-files', 'images', imageFileName);
   imageFile.mv(imagePath, (err) => {
