@@ -4,7 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const sizeOf = require('image-size');
 const fileUpload = require('express-fileupload');
+const PORT = process.env.PORT || 5004
 
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
@@ -66,8 +68,8 @@ app.post('/upload-image', (req, res) => {
   });
 });
 
-app.listen(5004, () => {
-  console.log('Server on port 5004');
+app.listen(PORT, () => {
+  console.log(`Server on port ${PORT}`);
 });
 
 module.exports.handler = app;

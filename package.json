@@ -4,20 +4,10 @@
   "description": "Server and Client for image mosaic",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install && npm run install-packages",
-    "install-packages": "concurrently \"cd functions && npm install\" \"cd frontend && npm install\"",
-    "start": "concurrently \"cd functions && npm run dev\" \"cd frontend && npm start\"",
-    "build": "cd frontend && npm run build && cp -r build ../functions/public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "Ventsislav Antov",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^7.5.0",
-    "express": "^4.18.2",
-    "express-fileupload": "^1.4.0",
-    "image-size": "^1.0.2",
-    "sharp": "^0.32.1",
-    "nodemon": "^2.0.22"
+  "dependencies": {
   }
 }
