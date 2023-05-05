@@ -1,0 +1,78 @@
+body {
+  background-color: #191919;
+  font-family: "Neue Haas Unica", sans-serif;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.item-wrapper {
+  top: 0;
+  position: absolute;
+  margin: 70px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+}
+
+.button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 98px;
+  height: 34px;
+  background: #4A52FF;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3941E8;
+}
+
+/* Styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .item-wrapper {
+    margin: 20px;
+    justify-content: center;
+  }
+
+  .item-container {
+    max-height: 300px;
+    max-width: 400px;
+  }
+
+  .page-title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .line {
+    width: 468px;
+  }
+
+  .button {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
