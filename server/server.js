@@ -71,5 +71,3 @@ app.post('/upload-image', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server on port ${PORT}`);
 });
-
-module.exports.handler = app;
