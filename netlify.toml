@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "cd frontend && yarn install && yarn build && cp -r build ../functions/public"
   functions = "functions"
 
 [[redirects]]
