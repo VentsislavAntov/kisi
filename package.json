@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install && npm run install-packages",
-    "install-packages": "concurrently \"cd server && npm install\" \"cd frontend && npm install\"",
-    "start": "concurrently \"cd server && npm run dev\" \"cd frontend && npm start\"",
-    "build": "concurrently \"cd server && npm run build\" \"cd frontend && npm run build\"",
+    "install-packages": "concurrently \"cd functions && npm install\" \"cd frontend && npm install\"",
+    "start": "concurrently \"cd functions && npm run dev\" \"cd frontend && npm start\"",
+    "build": "cd frontend && npm run build && cp -r build ../functions/public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ventsislav Antov",

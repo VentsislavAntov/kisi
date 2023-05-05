@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  functions = "functions"
+
+[[redirects]]
+  from = "/upload-image"
+  to = "/.netlify/functions/upload-image"
+  status = 200
+
+[[redirects]]
+  from = "/images/:imageName"
+  to = "/.netlify/functions/images/:imageName"
+  status = 200
+
+[[redirects]]
+  from = "/images"
+  to = "/.netlify/functions/images"
+  status = 200
