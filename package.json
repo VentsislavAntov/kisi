@@ -1,0 +1,18 @@
+{
+  "name": "kisi",
+  "version": "1.0.0",
+  "description": "Server and Client for image mosaic",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install && npm run install-packages",
+    "install-packages": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
+    "start": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ventsislav Antov",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.5.0"
+  }
+}
