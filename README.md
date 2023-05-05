@@ -6,6 +6,8 @@ The client app is built using React and plain CSS, and it populates cards with i
 
 The two apps are running concurrently.
 
+App deployed on Heroku at: https://fast-caverns-00592.herokuapp.com/
+
 ## Requirements
 ### Installation
 

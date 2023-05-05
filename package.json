@@ -4,10 +4,15 @@
   "description": "Server and Client for image mosaic",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "prestart": "npm install && npm run install-packages",
+    "install-packages": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\"",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ventsislav Antov",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "concurrently": "^8.0.1"
   }
 }
